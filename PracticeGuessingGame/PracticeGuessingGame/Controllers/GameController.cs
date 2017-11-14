@@ -11,11 +11,15 @@ namespace PracticeGuessingGame.Controllers
         // GET: Game
         public ActionResult Index()
         {
+           Session["answer"] = new Random().Next(1, 11);
             return View();
         }
 
-        //int rnd = new Random
-        //{ };
+        private bool GuessIsCorrect(int guess) => guess == (int)Session["answer"];
+
+        [HttpPost]
+
+        public ActionResult index 
 
     }
 }
