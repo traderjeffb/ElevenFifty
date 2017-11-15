@@ -11,7 +11,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using ElevenNote.Web.Models;
-using ElevenNote.Web.Data;
+using ElevenNote.Data;
 
 namespace ElevenNote.Web
 {
