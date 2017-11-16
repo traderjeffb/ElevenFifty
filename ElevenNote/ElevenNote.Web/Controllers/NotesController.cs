@@ -39,8 +39,19 @@ namespace ElevenNote.Web.Controllers
                 ModelState.AddModelError("", "Unable to create note");
                 return View(model);
             }
+            return RedirectToAction("index");
 
-            return RedirectToAction("Index");
         }
+        public ActionResult Details(int id)
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var svc = new NoteService(userId);
+            var model = svc.GetNoteById(id);
+
+            return View(model);
+        }
+
     }
+
+
 }
