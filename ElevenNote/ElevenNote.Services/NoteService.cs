@@ -17,6 +17,8 @@ namespace ElevenNote.Services
             _userId = userId;
         }
 
+        public bool IsStarred { get; set; }
+
         public IEnumerable<NoteListItemModel> GetNotes()
         {
             using (var ctx = new ElevenNoteDbContext() )
@@ -31,6 +33,7 @@ namespace ElevenNote.Services
                              {
                                  NoteId = e.NoteId,
                                  Title = e.Title,
+                                 IsStarred = e.IsStarred,
                                  CreateUtc = e.CreateUtc,
                                  ModifiedUtc = e.ModifiedUtc
                              })

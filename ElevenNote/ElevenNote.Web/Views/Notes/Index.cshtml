@@ -29,6 +29,9 @@
             @Html.DisplayNameFor(model => model.Title)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.IsStarred)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.CreateUtc)
         </th>
         <th>
@@ -45,6 +48,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.Title)
         </td>
+        <td>@Html.DisplayFor(modelItem => item.IsStarred)</td>
         <td>
             @Html.DisplayFor(modelItem => item.CreateUtc)
         </td>
