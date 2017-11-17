@@ -17,6 +17,10 @@ namespace ElevenNote.Services
             _userId = userId;
         }
 
+        public NoteService()
+        {
+        }
+
         public bool IsStarred { get; set; }
 
         public IEnumerable<NoteListItemModel> GetNotes()
@@ -100,6 +104,7 @@ namespace ElevenNote.Services
                 entity.Title = model.Title;
                 entity.Content = model.Content;
                 entity.ModifiedUtc = DateTime.UtcNow;
+                entity.IsStarred = model.IsStarred;
 
                 return ctx.SaveChanges() == 1;
             }
