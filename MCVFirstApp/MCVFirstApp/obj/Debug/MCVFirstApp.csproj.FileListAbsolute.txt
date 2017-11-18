@@ -1,0 +1,2 @@
+C:\ElevenFifty\Dev\MCVFirstApp\MCVFirstApp\obj\Debug\MCVFirstApp.csprojResolveAssemblyReference.cache
+C:\ElevenFifty\Dev\MCVFirstApp\MCVFirstApp\obj\Debug\MCVFirstApp.csproj.CoreCompileInputs.cache
